@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Emoji from Text</title>
+    <!-- Modern font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Text to Emoji <span class="header-emoji">✨</span></h1>
+            <p>Type how you feel, and we'll predict the emoji!</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea id="textInput" placeholder="E.g., I am very happy today..."></textarea>
+                <div class="error-msg" id="errorMsg"></div>
+                <div class="input-actions">
+                    <button id="suggestBtn" class="btn-secondary" type="button">Suggest Text</button>
+                    <button id="predictBtn">Predict Emoji</button>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <span>Predicting...</span>
+                </div>
+                <div id="emojiResult" class="emoji-display"></div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
